@@ -1,5 +1,5 @@
 export const Statistics = ({ stats }) => {
-  console.log(stats);
+ 
   return (
     <section>
       <ul>
