@@ -1,3 +1,5 @@
+import { List } from "./Profile.styled";
+
 export const Profile = ({ avatar, username, tag, location, stats }) => {
     
   const keys = Object.keys(stats);
@@ -11,14 +13,14 @@ export const Profile = ({ avatar, username, tag, location, stats }) => {
         <p>{location}</p>
       </div>
 
-      <ul>
+      <List>
         {keys.map(item => (
           <li key={item}>
             <span>{item}</span>
             <span>{stats[item]}</span>
           </li>
         ))}
-      </ul>
+      </List>
     </div>
   );
 };
