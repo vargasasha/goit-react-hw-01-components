@@ -1,4 +1,4 @@
-import { List } from "./Profile.styled";
+import { List, ListItem, Image } from "./Profile.styled";
 
 export const Profile = ({ avatar, username, tag, location, stats }) => {
     
@@ -7,7 +7,7 @@ export const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
     <div>
       <div>
-        <img src={avatar} alt={username} />
+        <Image src={avatar} alt={username} />
         <p>{username}</p>
         <p>@{tag}</p>
         <p>{location}</p>
@@ -15,10 +15,10 @@ export const Profile = ({ avatar, username, tag, location, stats }) => {
 
       <List>
         {keys.map(item => (
-          <li key={item}>
+          <ListItem key={item}>
             <span>{item}</span>
             <span>{stats[item]}</span>
-          </li>
+          </ListItem>
         ))}
       </List>
     </div>
