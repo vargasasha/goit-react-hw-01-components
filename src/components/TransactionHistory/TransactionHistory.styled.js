@@ -11,6 +11,7 @@ padding: 12px 60px;
 `;
 
 export const TableRow = styled.td`
-border: 1px solid black;
-text-align: center;
+  border: 1px solid black;
+  text-align: center;
+  border-spacing: 0px;
 `;

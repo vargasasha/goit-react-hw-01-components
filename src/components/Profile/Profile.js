@@ -1,17 +1,17 @@
-import { List, ListItem, Image } from "./Profile.styled";
+import { List, ListItem, Image, Wrapper, Avatar } from './Profile.styled';
 
 export const Profile = ({ avatar, username, tag, location, stats }) => {
     
   const keys = Object.keys(stats);
 
   return (
-    <div>
-      <div>
+    <Wrapper>
+      <Avatar>
         <Image src={avatar} alt={username} />
         <p>{username}</p>
         <p>@{tag}</p>
         <p>{location}</p>
-      </div>
+      </Avatar>
 
       <List>
         {keys.map(item => (
@@ -21,6 +21,6 @@ export const Profile = ({ avatar, username, tag, location, stats }) => {
           </ListItem>
         ))}
       </List>
-    </div>
+    </Wrapper>
   );
 };
